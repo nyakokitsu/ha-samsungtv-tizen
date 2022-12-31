@@ -169,7 +169,8 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
         show_logos = config.get(CONF_SHOW_LOGOS)
         uuid = config.get(CONF_UUID)
         if uuid  == "" :
-            uuid = None    elif discovery_info is not None:
+            uuid = None
+    elif discovery_info is not None:
         tv_name = discovery_info.get("name")
         model = discovery_info.get("model_name")
         host = discovery_info.get("host")
